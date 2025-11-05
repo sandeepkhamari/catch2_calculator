@@ -21,6 +21,10 @@ T calculator<T>::multiply(T a, T b)
 template<typename T>
 T calculator<T>::divide(T a, T b)
 {
+  if(b==0)
+  {
+    throw std::domain_error("Division by zero condition.");
+  }
   return a/b;
 }
 
