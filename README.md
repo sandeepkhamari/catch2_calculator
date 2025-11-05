@@ -19,3 +19,8 @@ ctest --verbose
 # Run tagged tests: runs only test tagged with "generator".
 cd test
 ./test_calculator [generator]
+./test_calculator [test1]
+./test_calculator [generator],[test1]
+
+# Find catch2 version.
+sudo apt show catch2

@@ -89,17 +89,19 @@ TEST_CASE("Add works with generators", "[generator]")
 }
 
 // catch2 generator with values() tagged with "generator"
-TEST_CASE("Add works with generator and values()", "[generator]")
+TEST_CASE("Add works with generator and values()", "[generator][test1]")
 {
   auto input_value1= GENERATE(values({1,2,3}));
   auto input_value2= GENERATE(values({3,4,5}));
+
+  //std::cout<<input_value1<<" "<<input_value2<<std::endl;
 
   calculator<int> calc;
   REQUIRE(calc.add(input_value1, input_value2) < 10);
 }
 
 // catch2 generator with range() tagged with "generator"
-TEST_CASE("Add works with generator and range()", "[generator]")
+TEST_CASE("Add works with generator and range()", "[generator][test1]")
 {
   auto input1= GENERATE(Catch::Generators::range(1,5));
   auto input2= GENERATE(Catch::Generators::range(1,5));
